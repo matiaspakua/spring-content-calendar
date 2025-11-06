@@ -1,4 +1,10 @@
 
+## [Unreleased]
+
+# v0.0.2
+# Added
+- Se completa el primer ejemplo de API rest.
 
 # v0.0.1
-- Exploring the applicationContext. 
+## Added
+- Explorando el esqueleto y pom, y el applicationContext. 

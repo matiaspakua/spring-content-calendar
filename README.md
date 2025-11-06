@@ -19,6 +19,12 @@ El repositorio de github: https://github.com/danvega/content-calendar
 - Maven 3.8.7
 - IntelliJ Community Edition v2025
 
+## Aspectos generales
+
+1) el CHANGELOG se realizará usando los lineamientos de: https://keepachangelog.com/en/1.1.0/
+2) el README siguiente algunas de las normas de: https://www.makeareadme.com/
+3) la documentación de la API: usando swagger.
+
 ## API Rest Testing
 
 Para el testing de las API rest utilizaré 2 herramientas:
