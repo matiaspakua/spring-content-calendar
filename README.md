@@ -6,6 +6,11 @@ Dan Vega.
 Se trata de un proyecto de Java con Spring 3. En mi caso particular, voy a customizar algunas cosas y agregar
 (al ambiente de desarrollo herramientas y otras cositas de modo de tener un ambiente más real).
 
+El curso de Dan es: https://youtu.be/UgX5lgv4uVM?si=EJLyeWQqWaFQOfDT
+
+El repositorio de github: https://github.com/danvega/content-calendar
+
+
 ## Setup inicial (configuración) de mi workstation
 
 - SO Linux Mint version MATE
