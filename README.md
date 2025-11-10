@@ -23,7 +23,7 @@ El repositorio de github: https://github.com/danvega/content-calendar
 
 1) el CHANGELOG se realizará usando los lineamientos de: https://keepachangelog.com/en/1.1.0/
 2) el README siguiente algunas de las normas de: https://www.makeareadme.com/
-3) la documentación de la API: usando swagger.
+3) la documentación de la API: usando swagger. SpringDoc OpenAPI Starter WebMVC UI
 
 ## API Rest Testing
 
@@ -31,3 +31,7 @@ Para el testing de las API rest utilizaré 2 herramientas:
 
 1. En línea de comandos (termina): HTTPIe
 2. GUI Bruno. La collection está en raiz del proyecto en la carpeta /http
+3. Los request de Bruno además de tener el body, tienen la carpeta de /test donde se usa javascript para el testing.
+
+Referencia: https://docs.usebruno.com/testing/tests/introduction
+

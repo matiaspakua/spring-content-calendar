@@ -1,8 +1,12 @@
 
 ## [Unreleased]
 
+# 0.0.3
+## Added
+- Added swagger dependency and documentation to the project. 
+
 # v0.0.2
-# Added
+## Added
 - Se completa el primer ejemplo de API rest.
 
 # v0.0.1
