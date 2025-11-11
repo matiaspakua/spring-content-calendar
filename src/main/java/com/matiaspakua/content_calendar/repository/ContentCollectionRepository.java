@@ -20,16 +20,16 @@ public class ContentCollectionRepository {
         this.contentList = contentList;
     }
 
-    public Optional<Content> findById(Integer id){
+    public Optional<Content> findById(Integer id) {
         return contentList.stream().filter(c -> id.equals(id)).findFirst();
     }
 
-    public Optional<List<Content>> findAll(){
+    public Optional<List<Content>> findAll() {
         return Optional.ofNullable(contentList);
     }
 
     @PostConstruct
-    public void init(){
+    public void init() {
         Content content = new Content(
                 1,
                 "first test",
@@ -40,6 +40,11 @@ public class ContentCollectionRepository {
                 LocalDateTime.now(),
                 "none"
         );
+        contentList.add(content);
+    }
+
+    public void save(Content content) {
+        contentList.removeIf(c -> c.id().equals(content.id()));
         contentList.add(content);
     }
 }

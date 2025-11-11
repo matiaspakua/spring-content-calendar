@@ -1,0 +1,8 @@
+repos:
+  - repo: local
+    hooks:
+      - id: spring-boot-test
+        name: Run Tests
+        entry: .githooks/precommit/run-tests.sh
+        language: script
+        always_run: true
