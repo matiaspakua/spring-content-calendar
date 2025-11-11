@@ -24,6 +24,13 @@ El repositorio de github: https://github.com/danvega/content-calendar
 1) el CHANGELOG se realizará usando los lineamientos de: https://keepachangelog.com/en/1.1.0/
 2) el README siguiente algunas de las normas de: https://www.makeareadme.com/
 3) la documentación de la API: usando swagger. SpringDoc OpenAPI Starter WebMVC UI
+4) Pre-commit configurado a nivel SO y a nivel proyecto:
+
+https://github.com/bekzod-murotboyev/git-hooks.git
+
+```bash
+sudo apt-get install pre-commit
+```
 
 ## API Rest Testing
 
