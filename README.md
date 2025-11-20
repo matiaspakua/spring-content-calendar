@@ -32,6 +32,24 @@ https://github.com/bekzod-murotboyev/git-hooks.git
 sudo apt-get install pre-commit
 ```
 
+
+## Actuator
+
+Se agrega al proyecto la dependencia `spring-boot-starter-actuator` que es una librería muy útil en el ecosistema de Spring Boot que se utiliza para monitorizar y gestionar la aplicación en entornos de producción.
+
+Básicamente, te proporciona una serie de "endpoints" (URLs) listos para usar que te dan información sobre el estado interno de la aplicación sin que tengas que programar nada extra.
+
+Por ejemplo:
+
+1. /actuator/health: Te dice si la aplicación está "UP" (funcionando) o "DOWN". Es muy usado por balanceadores de carga o sistemas como Kubernetes para saber si la aplicación está funcionando correctamente.
+2. /actuator/info: Muestra información general de la aplicación (versión, descripción, etc., si la configuras).
+3. /actuator/metrics: Expone métricas detalladas (uso de memoria, CPU, hilos, peticiones HTTP, etc.).
+4. /actuator/loggers: Permite ver y cambiar el nivel de log (DEBUG, INFO, ERROR) en tiempo real sin reiniciar la aplicación.
+
+En resumen, es como un panel de control para ver qué está pasando "bajo el capó" de la aplicación mientras se está ejecutando.
+
+
+
 ## API Rest Testing
 
 Para el testing de las API rest utilizaré 2 herramientas:
