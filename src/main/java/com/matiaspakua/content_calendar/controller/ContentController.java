@@ -20,27 +20,26 @@ public class ContentController {
     private final ContentCollectionRepository contentCollectionRepository;
     private final ContentValidatorService contentValidatorService;
 
-
     public ContentController(ContentCollectionRepository contentCollectionRepository,
-                             ContentValidatorService contentValidatorService) {
+            ContentValidatorService contentValidatorService) {
         this.contentCollectionRepository = contentCollectionRepository;
         this.contentValidatorService = contentValidatorService;
 
     }
 
-
     @GetMapping
     public List<Content> findAll() {
-        return this.contentCollectionRepository.findAll().orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No content found"));
+        return this.contentCollectionRepository.findAll()
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No content found"));
     }
 
     @GetMapping("/{id}")
-    public Optional<Content> findById(@PathVariable Integer id) {
-        return Optional.ofNullable(contentCollectionRepository.findById(id))
+    public Content findById(@PathVariable Integer id) {
+        return contentCollectionRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Content not found"));
     }
 
-    public void create(Content content){
+    public void create(Content content) {
         Content newContent = new Content(
                 this.contentValidatorService.getContentIdentifierCounter(),
                 content.title(),
@@ -49,8 +48,7 @@ public class ContentController {
                 content.contentType(),
                 content.creationDate(),
                 content.updateDate(),
-                content.url()
-        );
+                content.url());
         this.contentCollectionRepository.save(content);
     }
 }

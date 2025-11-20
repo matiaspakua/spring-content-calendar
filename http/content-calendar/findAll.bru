@@ -1,0 +1,25 @@
+meta {
+  name: findAll
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8080/api/content
+  body: none
+  auth: none
+}
+
+tests {
+  test("Request accepted", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+   
+  test("should return json with the content", function () {
+    expect(res.getBody()).to.be.an('array');
+    if (res.getBody().length > 0) {
+        expect(res.getBody()[0]).to.have.property('id');
+        expect(res.getBody()[0]).to.have.property('title');
+    }
+  });
+}

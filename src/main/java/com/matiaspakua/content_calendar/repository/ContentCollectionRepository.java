@@ -21,7 +21,7 @@ public class ContentCollectionRepository {
     }
 
     public Optional<Content> findById(Integer id) {
-        return contentList.stream().filter(c -> id.equals(id)).findFirst();
+        return contentList.stream().filter(c -> c.id().equals(id)).findFirst();
     }
 
     public Optional<List<Content>> findAll() {
@@ -38,8 +38,7 @@ public class ContentCollectionRepository {
                 Type.POST,
                 LocalDateTime.now(),
                 LocalDateTime.now(),
-                "none"
-        );
+                "none");
         contentList.add(content);
     }
 

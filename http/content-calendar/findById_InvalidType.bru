@@ -1,0 +1,17 @@
+meta {
+  name: findById_InvalidType
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:8080/api/content/abc
+  body: none
+  auth: none
+}
+
+tests {
+  test("Request bad request", function () {
+    expect(res.getStatus()).to.equal(400);
+  });
+}
